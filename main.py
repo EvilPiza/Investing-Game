@@ -4,16 +4,16 @@ import time
 print("Welcome to My Generic Investing Game!")
 print(" ")
 time.sleep(.3)
-print("Type 'h' or 'help' to see the controls")
+print("Type 'h' or 'help' to see the controls.")
 print(" ")
 time.sleep(.3)
-print("The Difference Between Large, Medium, And Small is risk")
+print("The difference between Large, Medium, and Small is risk.")
 time.sleep(.4)
-print("Large can gain the most but can lose the most")
+print("Large can gain the most but can lose the most.")
 time.sleep(.4)
-print("Small is the safest but makes less from gains")
+print("Small is the safest but makes less from gains.")
 time.sleep(.4)
-print("Medium is right in the middle")
+print("Medium is right in the middle.")
 time.sleep(.5)
 print(" ")
 print(" ")
@@ -43,26 +43,26 @@ def start_game():
         print("l or large to select large when handling shares")
         print("m or medium to select medium shares when handling shares")
         print("s or small to select small shares when handling shares")
-        print("when in the action menu 'm' or 'money' is used to check how much money you have")
+        print("When in the action menu, 'm' or 'money' to check how much money you have")
         start_game()
 
     if inp == "portfolio" or inp == "p":
         print(" ")
-        print("Large Shares " + str(l_shares) + "x Worth $" + str(l_shares * l_rate))
-        print("Medium Shares " + str(m_shares) + "x Worth $" + str(m_shares * m_rate))
-        print("Small Shares " + str(s_shares) + "x Worth $" + str(s_shares * s_rate))
-        print("Your total NetWorth is $" + str((l_shares * l_rate) + (m_shares * m_rate) + (s_shares * s_rate)))
+        print("Large Shares: " + str(l_shares) + "x Worth $" + str(l_shares * l_rate))
+        print("Medium Shares: " + str(m_shares) + "x Worth $" + str(m_shares * m_rate))
+        print("Small Shares: " + str(s_shares) + "x Worth $" + str(s_shares * s_rate))
+        print("Your total net worth is $" + str((l_shares * l_rate) + (m_shares * m_rate) + (s_shares * s_rate)))
         print(" ")
         start_game()
 
     if inp == "buy" or inp == "purchase" or inp == "b":
 
         print(" ")
-        print("Large Shares Cost $" + str(l_rate))
-        print("Medium Shares Cost $" + str(m_rate))
-        print("Small Shares Cost $" + str(s_rate))
+        print("Large Shares cost $" + str(l_rate))
+        print("Medium Shares cost $" + str(m_rate))
+        print("Small Shares cost $" + str(s_rate))
         print(" ")
-        inp = str(input("Which Type Of Share Would You Like To Purchase? "))
+        inp = str(input("Which type of share would you like to purchase? "))
 
         if inp == "small" or inp == "s":
             inp = int(input("How many would you like to purchase? "))
@@ -103,7 +103,7 @@ def start_game():
                 start_game()
 
         else:
-            print("Weird command, try again")
+            print("Unknown command, try again")
             start_game()
 
     if inp == "money" or inp == "m":
@@ -117,7 +117,7 @@ def start_game():
 
     if inp == "sell" or inp == "s":
 
-        inp = str(input("Which Type of Share Would You Like To Sell? "))
+        inp = str(input("Which type of share would you like to sell? "))
 
         if inp == "small" or inp == "s":
 
@@ -141,7 +141,7 @@ def start_game():
 
         else:
 
-            print("Weird Command, try again")
+            print("Unknown command, try again")
             start_game()   
 
         if inp == "medium" or inp == "m":
@@ -166,7 +166,7 @@ def start_game():
 
         else:
 
-            print("Weird Command, try again")
+            print("Unknown command, try again")
             start_game()
 
         if inp == "large" or inp == "l":
@@ -190,12 +190,12 @@ def start_game():
                 start_game()
         else:
 
-            print("Weird Command, try again")
+            print("Unknown command, try again")
             start_game()
 
     else:
 
-        print("Weird Command, try again")
+        print("Unknown command, try again")
         start_game()
 
 
@@ -212,35 +212,35 @@ def rate_change():
 
 
     if l_rate > 100:
-        print("Large Shares Went Up By " + str(l_rate - 100) + "%")
+        print("Large Shares went up by " + str(l_rate - 100) + "%")
 
     if m_rate > 100:
-        print("Medium Shares Went Up By " + str(m_rate - 100) + "%")
+        print("Medium Shares went up by " + str(m_rate - 100) + "%")
 
     if s_rate > 100:
 
-        print("Small Shares Went Up By " + str(s_rate - 100) + "%")
+        print("Small Shares went up by " + str(s_rate - 100) + "%")
 
     elif l_rate == 100:
 
-        print("Large Shares Didn't Change")
+        print("Large Shares didn't change")
 
     elif m_rate == 100:
 
-        print("Medium Shares Didn't Change")
+        print("Medium Shares didn't change")
 
     elif s_rate == 100:
 
-        print("Small Shares Didn't Change")
+        print("Small Shares didn't change")
 
     if l_rate < 100:
-        print("Large Shares Went Down By " + str(100 - l_rate) + "%")
+        print("Large Shares went down by " + str(100 - l_rate) + "%")
 
     if m_rate < 100:
-        print("Medium Shares Went Down By " + str(100 - m_rate) + "%")
+        print("Medium Shares went down by " + str(100 - m_rate) + "%")
 
     if s_rate < 100:
-        print("Small Shares Went Down By " + str(100 - s_rate) + "%")
+        print("Small Shares went down by " + str(100 - s_rate) + "%")
 
     print(" ")
 
