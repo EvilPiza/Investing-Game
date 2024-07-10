@@ -33,9 +33,9 @@ def start_game():
     global l_shares, m_shares, s_shares, l_rate, m_rate, s_rate, starting_money
 
     inp = str(input("Action: "))
+    inp = inp.lower()
 
     if inp == "help" or inp == "h":
-        print("Make Sure Everything Is LOWERCASE!!")
         print("h is for help")
         print("p or portfolio to see your networth and your portfolio")
         print("buy, purchase, or b to purchase shares")
